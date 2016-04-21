@@ -1,27 +1,37 @@
-# See https://www.dartlang.org/tools/private-files.html
+*.gem
+*.rbc
+/.config
+/coverage/
+/InstalledFiles
+/pkg/
+/spec/reports/
+/test/tmp/
+/test/version_tmp/
+/tmp/
 
-# Files and directories created by pub
-.buildlog
-.packages
-.project
-.pub/
+## Specific to RubyMotion:
+.dat*
+.repl_history
 build/
-**/packages/
 
-# Files created by dart2js
-# (Most Dart developers will use pub build to compile Dart, use/modify these 
-#  rules if you intend to use dart2js directly
-#  Convention is to use extension '.dart.js' for Dart compiled to Javascript to
-#  differentiate from explicit Javascript files)
-*.dart.js
-*.part.js
-*.js.deps
-*.js.map
-*.info.json
+## Documentation cache and generated files:
+/.yardoc/
+/_yardoc/
 
-# Directory created by dartdoc
-doc/api/
+## Environment normalisation:
+/.bundle/
+/vendor/bundle
+/lib/bundler/man/
 
-# Don't commit pubspec lock file 
-# (Library packages only! Remove pattern if developing an application package)
-pubspec.lock
+# for a library or gem, you might want to ignore these files since the code is
+# intended to run in multiple environments; otherwise, check them in:
+  Gemfile.lock
+# .ruby-version
+# .ruby-gemset
+
+# unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
+.rvmrc
+
+# NewRelic stuff
+logfile
+log/newrelic_agent.log
