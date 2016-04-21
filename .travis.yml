@@ -1,7 +1,7 @@
 language: ruby
 cache: bundler
 rvm:
-  - 2.2.1
+  - 2.3.0
 git:
   submodules: false
 env:
