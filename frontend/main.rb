@@ -31,7 +31,7 @@ post '/api/v1/extern/groupme' do
     inbound_payload = JSON.parse(data)
     inbound_message = inbound_payload["text"]
     inbound_sender = inbound_payload["name"]
-    if inbound_message.split(" ")[0].eql?(inbound_payload["@" + ENV["GROUPME_BOT_NAME"]])
+    if inbound_message.split(" ")[0].eql?("@" + ENV["GROUPME_BOT_NAME"])
         resp = Hash.new
         resp["bot_id"] = ENV["GROUPME_BOT_ID"]
         resp["text"] = "@" + inbound_sender + ": " + Botsolver.go(inbound_message.sub("@" + ENV["GROUPME_BOT_NAME"] + " ", ""))
