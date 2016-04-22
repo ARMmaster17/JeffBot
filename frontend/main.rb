@@ -21,6 +21,6 @@ end
 
 ##
 # Simple API endpoint for getting response to query
-get '/api/v1/post' do
-    Botsolver.go(params[arg])
+post '/api/v1/post' do
+    Botsolver.go(params[:arg])
 end
