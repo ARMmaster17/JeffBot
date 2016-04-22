@@ -8,6 +8,10 @@ gem 'puma'
 gem 'sinatra'
 gem 'slim'
 gem 'rest-client'
+gem "activerecord", "~> 4.2.5.1"
+gem "sinatra-activerecord"
+gem "pg"
+gem 'activemodel', '~> 4.2.5.1'
 gem 'json'
 gem "rack-test"
 gem 'codacy-coverage', group: :test, require: nil

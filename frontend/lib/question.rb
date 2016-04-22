@@ -93,16 +93,8 @@ module Question
             quotes.push("I don't know about you, but I AM THOR, KING OF ASGARD!")
             return RandomAnswer.pick(quotes)
         elsif Lexicon.match_grammar(query, "what is [subject-prefix] [*]") or Lexicon.match_grammar(query, "what is [*]")
-            adj = query.sub("what is ", "")
-            quotes = Array.new
-            quotes.push("I don't want to talk about it.")
-            quotes.push("10/10 Would recommend.")
-            quotes.push("Oh yeah, #{adj}, fun stuff.")
-            quotes.push("Sorry, that's classified.")
-            quotes.push("You might be a little too young to be learning about #{adj}. Go talk to your parents.")
-            quotes.push("Stalin's most prized possesion.")
-            quotes.push("The #{adj}, one of the most #{Wordgen.get_from_catagory("adjective")} objects in the universe.")
-            return RandomAnswer.pick(quotes)
+            adj = query.sub("what is ", "").sub("a ", "")
+            return Learning.recall(adj)
         elsif Lexicon.match_grammar(query, "what do you think of [*]")
             adj = query.split(" ")[5]
             quotes = Array.new
