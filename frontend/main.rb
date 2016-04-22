@@ -15,6 +15,11 @@ set :bind, ENV['IP'] || '0.0.0.0'
 #use Rack::Flash
 
 ##
+# Startup code
+GroupMe.broadcast("JeffBot has been successfully updated.")
+##
+
+##
 # Index page of site featuring chat window.
 get '/' do
    slim :chathome 
@@ -32,7 +37,7 @@ post '/api/v1/extern/groupme' do
     inbound_message = inbound_payload["text"]
     inbound_sender = inbound_payload["name"]
     if inbound_message.split(" ")[0].eql?("@" + ENV["GROUPME_BOT_NAME"])
-        payload = Botsolver.go(inbound_message.sub("@" + ENV["GROUPME_BOT_NAME"] + " ", "")
+        payload = Botsolver.go(inbound_message.sub("@" + ENV["GROUPME_BOT_NAME"] + " ", ""))
         GroupMe.send(inbound_sender, payload)
     end
 end

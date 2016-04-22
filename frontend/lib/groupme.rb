@@ -6,7 +6,7 @@ module GroupMe
         GroupMe.broadcast("@" + inbound_sender + ": " + payload)
     end
     def GroupMe.broadcast(payload)
-        if ENV["RACK_ENV"].equ?("production")
+        if ENV["RACK_ENV"].eql?("production")
             resp = Hash.new
             resp["bot_id"] = ENV["GROUPME_BOT_ID"]
             resp["text"] = payload
