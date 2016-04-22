@@ -1,0 +1,33 @@
+adjective:
+    - dumb
+    - happy
+    - idiotic
+    - sad
+    - smart
+    - stupid
+    - big
+    - small
+    - square
+    - circular
+    - vague
+    - random
+subject:
+    - you
+    - i
+    - he
+    - she
+    - we
+    - they
+    - it
+subject-prefix:
+    - the
+    - a
+    - an
+    - those
+subject-context-specifiers:
+    - these
+    - this
+    - that
+subject-status:
+    - are
+    - is
