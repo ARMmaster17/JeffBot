@@ -1,5 +1,5 @@
 .message_user {
-    width: 55%;
+    /*width: 55%;*/
     float: right;
     background-color: #70db70;
     margin: 5px;
@@ -7,12 +7,17 @@
     border-radius: 25px;
 }
 .message_jeff {
-    width: 55%;
+    /*width: 55%;*/
     float: left;
     background-color: #33cc33;
     margin: 5px;
     padding: 10px;
     border-radius: 25px;
+}
+.message_container {
+    width: 100%;
+    float: left;
+    margin: 5px;
 }
 .message_info {
     width: 100%;
