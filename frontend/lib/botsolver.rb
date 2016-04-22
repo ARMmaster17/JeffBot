@@ -6,6 +6,16 @@ module Botsolver
         query = Lexicon.clean(arg)
         if query.eql?("what is your name")
             return "Jeff"
+        elsif query.eql?("say something funny")
+            quotes = Array.new
+            quotes.push("Something funny")
+            quotes.push("Your face")
+            quotes.push("Why?")
+            quotes.push("No")
+            quotes.push("Death")
+            quotes.push("Superman is the best!")
+            quotes.push("SPOILER ALERT: You're gonna die in the next 100 years")
+            return RandomAnswer.pick(quotes)
         elsif query.match(/^say .+?/)
             return query.sub("say ", "")
         elsif query.match(/^what is a .+?/)
@@ -30,10 +40,12 @@ module Botsolver
             quotes.push("I da best")
             quotes.push("I iz smrt")
             return RandomAnswer.pick(quotes)
-        elsif query.eql?("something funny")
+        elsif query.eql?("something funny") || query.eql?("something nice")
             return "Very funny"
-        elsif query.match(/^im ^a .+?/) or query.match(/^i am ^a .+?/)
-            if query.match(/^im ^a .+?/)
+        elsif query.match(/^are you a/)
+            
+        elsif query.match(/^im a .+?/) or query.match(/^i am a .+?/)
+            if query.match(/^im a .+?/)
                 adj = query.sub("im a ", "")
             else
                 adj = query.sub("i am a ", "")
