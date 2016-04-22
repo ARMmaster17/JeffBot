@@ -32,6 +32,22 @@ module Botsolver
             return RandomAnswer.pick(quotes)
         elsif query.eql?("something funny")
             return "Very funny"
+        elsif query.match(/^im ^a .+?/) or query.match(/^i am ^a .+?/)
+            if query.match(/^im ^a .+?/)
+                adj = query.sub("im a ", "")
+            else
+                adj = query.sub("i am a ", "")
+            end
+            quotes = Array.new
+            quotes.push("Hi #{adj}, I'm Jeff")
+            quotes.push("Pretty sure that's what Hitler was")
+            quotes.push("Cool")
+            quotes.push("Sure you are")
+            quotes.push("I'm a robot, checkmate")
+            quotes.push("No you aren't")
+            quotes.push("Nu uh!")
+            quotes.push("I AM IRONMAN!")
+            return RandomAnswer.pick(quotes)
         elsif query.match(/^im .+?/) or query.match(/^i am .+?/)
             if query.match(/^im .+?/)
                 adj = query.sub("im ", "")
