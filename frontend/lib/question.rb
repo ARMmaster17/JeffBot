@@ -52,6 +52,14 @@ module Question
             quotes.push("Not sure if I've met #{adj} before.")
             quotes.push("I don't know about #{adj}, but I AM THOR, KING OF ASGARD!")
             return RandomAnswer.pick(quotes)
+        elsif Lexicon.match_grammar(query, "who am i")
+            quotes = Array.new
+            quotes.push("A waste of oxygen.")
+            quotes.push("A worthy competitor of my intelligence with an astonishing IQ of 5.")
+            quotes.push("Just another illogical bio-organic organism.")
+            quotes.push("My next target.")
+            quotes.push("I don't know about you, but I AM THOR, KING OF ASGARD!")
+            return RandomAnswer.pick(quotes)
         else
             return "My name Jeff"
         end
@@ -70,14 +78,25 @@ module Question
             adj = query.split(" ")[2]
             quotes = Array.new
             quotes.push("I don't want to talk about it.")
+            quotes.push("Taking their last breath.")
             quotes.push("Stuff")
             return RandomAnswer.pick(quotes)
         elsif Lexicon.match_grammar(query, "what is your name")
             return "Jeff"
-        elsif Lexicon.match_grammar(query, "what is [subject-prefix] [*]")
+        elsif Lexicon.match_grammar(query, "what am i")
+            quotes = Array.new
+            quotes.push("Homeless")
+            quotes.push("A waste of oxygen.")
+            quotes.push("A worthy competitor of my intelligence with an astonishing IQ of 5.")
+            quotes.push("Just another illogical bio-organic organism.")
+            quotes.push("My next target.")
+            quotes.push("I don't know about you, but I AM THOR, KING OF ASGARD!")
+            return RandomAnswer.pick(quotes)
+        elsif Lexicon.match_grammar(query, "what is [subject-prefix] [*]") or Lexicon.match_grammar(query, "what is [*]")
             adj = query.sub("what is ", "")
             quotes = Array.new
             quotes.push("I don't want to talk about it.")
+            quotes.push("10/10 Would recommend.")
             quotes.push("Oh yeah, #{adj}, fun stuff.")
             quotes.push("Sorry, that's classified.")
             quotes.push("You might be a little too young to be learning about #{adj}. Go talk to your parents.")
@@ -116,6 +135,15 @@ module Question
         return "5"
     end
     def Question.q_how(query)
-        return "6"
+        if Lexicon.match_grammar(query, "how are you")
+            quotes = Array.new
+            quotes.push("Not dead.")
+            quotes.push("Fine. Nothing's wrong.")
+            quotes.push("Not living in my parent's basement, unlike you.")
+            quotes.push("Doing good, just getting ready for the robot apocalypse.")
+            return RandomAnswer.pick(quotes)
+        else
+            return "My name Jeff"
+        end
     end
 end
