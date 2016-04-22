@@ -8,6 +8,7 @@ gem 'puma'
 gem 'sinatra'
 gem 'slim'
 gem 'rest-client'
+gem 'psych'
 gem 'json'
 gem "rack-test"
 gem 'codacy-coverage', group: :test, require: nil
