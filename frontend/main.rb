@@ -6,18 +6,13 @@ require 'rest-client'
 require 'json'
 require 'rack-flash'
 require_relative 'lib/botsolver'
+require_relative 'lib/groupme'
 
 set :port, ENV['PORT'] || 8080
 set :bind, ENV['IP'] || '0.0.0.0'
 
 #enable :sessions
 #use Rack::Flash
-
-##
-# Startup code
-GroupMe.broadcast("JeffBot is now online.")
-##
-
 
 ##
 # Index page of site featuring chat window.
