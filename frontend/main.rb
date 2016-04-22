@@ -24,6 +24,7 @@ end
 post '/api/v1/post' do
     Botsolver.go(params[:arg])
 end
+
 post '/api/v1/extern/groupme' do
     request.body.rewind
     data = request.body.read
