@@ -29,6 +29,15 @@ module Botsolver
             quotes.push("I don't know")
             quotes.push("Sure, whatever")
             return RandomAnswer.pick(quotes)
+        elsif query.match(/^my name is .+?/)
+            adj = query.sub("my name is ", "")
+            quotes = Array.new
+            quotes.push("Hi #{adj}")
+            quotes.push("What kind of name is that?")
+            quotes.push("Name's Jeff, Jeff Jeff")
+            quotes.push("My real name is 'hwrk-088766893a', but you can call me Jeff")
+            quotes.push("I AM THOR, KING OF ASGARD!")
+            return RandomAnswer.pick(quotes)
         elsif query.match(/^are you .+?/)
             quotes = Array.new
             quotes.push("Yes")
@@ -42,8 +51,18 @@ module Botsolver
             return RandomAnswer.pick(quotes)
         elsif query.eql?("something funny") || query.eql?("something nice")
             return "Very funny"
-        elsif query.match(/^are you a/)
-            
+        elsif query.match(/^are you a .+?/)
+            adj = query.sub("are you a ", "")
+            quotes = Array.new
+            quotes.push("Yes I'm a #{adj}, How did you know?")
+            quotes.push("Pretty sure that's what Hitler was")
+            quotes.push("Nope")
+            quotes.push("Who told you that?")
+            quotes.push("Yes")
+            quotes.push("I may or may not be a #{adj}, If I told you I would have to kill you")
+            quotes.push("No")
+            quotes.push("I'm not a #{adj}, I AM THOR, KING OF ASGARD!")
+            return RandomAnswer.pick(quotes)
         elsif query.match(/^im a .+?/) or query.match(/^i am a .+?/)
             if query.match(/^im a .+?/)
                 adj = query.sub("im a ", "")
