@@ -7,6 +7,8 @@ git:
 env:
   global:
     - RACK_ENV=test
+services:
+  - rabbitmq
 notifications:
   email:
     recipients:
@@ -19,8 +21,7 @@ branches:
 install:
   - bundle install
 script:
-#  - rake test --trace
-  - echo 'testing skipped'
+  - rake test --trace
 deploy:
   provider: heroku
   api_key: "9951e24c-b489-48fe-8a60-b325e8d850dd"
