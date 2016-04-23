@@ -1,4 +1,5 @@
 require_relative 'wordgen'
+require_relative 'learning'
 
 module Question
     def Question.go(query)
@@ -74,6 +75,8 @@ module Question
             quotes.push("Your worst nightmare")
             quotes.push("The ironic metaphor of you if you had an IQ of 60...Oh wait.")
             return RandomAnswer.pick(quotes)
+        elsif Lexicon.match_grammar(query, "what do you know")
+            return Learning.recall_all
         elsif Lexicon.match_grammar(query, "what [subject-status] [subject] doing")
             adj = query.split(" ")[2]
             quotes = Array.new

@@ -30,4 +30,19 @@ module Learning
             return "I don't know that word yet, want to teach me?"
         end
     end
+    def Learning.recall_all()
+        begin
+            words = Array.new
+            Entries.all.each do |entry|
+                words.push(entry.word)
+            end
+            result = ""
+            words.each do |word|
+                result = result + word + " "
+            end
+            return result
+        rescue
+            return "I don't seem to be able to remember anything."
+        end
+    end
 end
