@@ -6,6 +6,7 @@ require 'rest-client'
 require 'json'
 require 'rack-flash'
 require_relative 'lib/groupme'
+require_relative 'lib/mqwrapper'
 
 set :port, ENV['PORT'] || 8080
 set :bind, ENV['IP'] || '0.0.0.0'
