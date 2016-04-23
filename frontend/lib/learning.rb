@@ -9,7 +9,7 @@ module Learning
             data.definition = meaning
             data.save
         rescue
-            data = Entries.create(word: word, definition: meaning)
+            data = Entries.create(id: Entries.count, word: word, definition: meaning)
             data.save
         end
     end
