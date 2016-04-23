@@ -36,7 +36,7 @@ module Learning
             Entries.all.each do |entry|
                 words.push(entry.word)
             end
-            result = ""
+            result = "I know the following words: "
             words.each do |word|
                 result = result + word + " "
             end
