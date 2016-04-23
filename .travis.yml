@@ -21,6 +21,7 @@ branches:
 install:
   - bundle install
 script:
+  - ./scripts/setupdb.sh
   - rake test --trace
 deploy:
   provider: heroku
