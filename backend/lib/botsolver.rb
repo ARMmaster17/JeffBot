@@ -140,6 +140,9 @@ module Botsolver
             meaning = query.sub("from now on #{word} is ", "")
             Learning.learn(word, meaning)
             return "Ok, got it, #{word} means #{meaning}"
+        elsif query.match(/^unlearn .+?/)
+            word = query.sub("unlearn ", "")
+            return Learning.unlearn(word)
         else
             return "My name Jeff"
         end

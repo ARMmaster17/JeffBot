@@ -21,4 +21,13 @@ module Learning
             return "I don't know that word yet, want to teach me?"
         end
     end
+    def Learning.unlearn(word)
+        begin
+            data = Entries.find_by(word: word)
+            data.destroy
+            return "Ok, I won't remember that word anymore."
+        rescue
+            return "I don't know that word yet, want to teach me?"
+        end
+    end
 end
