@@ -14,8 +14,11 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    amq-protocol (2.0.1)
     arel (6.0.3)
     builder (3.2.2)
+    bunny (2.3.1)
+      amq-protocol (>= 2.0.1)
     codacy-coverage (0.3.1)
       rest-client (~> 1.8)
       simplecov (>= 0.10.0)
@@ -73,6 +76,7 @@ PLATFORMS
 DEPENDENCIES
   activemodel (~> 4.2.5.1)
   activerecord (~> 4.2.5.1)
+  bunny
   codacy-coverage
   json
   pg

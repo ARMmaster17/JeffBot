@@ -4,6 +4,7 @@ ruby "2.3.0"
 
 gem 'rack-protection'
 gem 'rack-flash3'
+gem 'bunny'
 gem 'puma'
 gem 'sinatra'
 gem 'slim'

@@ -5,7 +5,6 @@ require 'slim'
 require 'rest-client'
 require 'json'
 require 'rack-flash'
-require_relative 'lib/botsolver'
 require_relative 'lib/groupme'
 
 set :port, ENV['PORT'] || 8080
@@ -28,7 +27,7 @@ end
 ##
 # Simple API endpoint for getting response to query
 post '/api/v1/post' do
-    Botsolver.go(params[:arg])
+    MQWrapper.send(params[:args])
 end
 
 post '/api/v1/extern/groupme' do
@@ -37,7 +36,7 @@ post '/api/v1/extern/groupme' do
     inbound_message = inbound_payload["text"]
     inbound_sender = inbound_payload["name"]
     if inbound_message.split(" ")[0].eql?("@" + ENV["GROUPME_BOT_NAME"])
-        payload = Botsolver.go(inbound_message.sub("@" + ENV["GROUPME_BOT_NAME"] + " ", ""))
+        payload = MQWrapper.send(inbound_message.sub("@" + ENV["GROUPME_BOT_NAME"] + " ", ""))
         GroupMe.send(inbound_sender, payload)
     end
 end
