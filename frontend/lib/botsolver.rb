@@ -135,9 +135,9 @@ module Botsolver
             quotes.push("I iz smrt")
             quotes.push("I'm Batman!")
             return RandomAnswer.pick(quotes)
-        elsif query.match(/^from now on .+? is .+?/)
+        elsif query.match(/^from now on .+?/) and query.contains(" is ")
             word = query.sub("from now on ", "").split(" ")[0]
-            meaning = query.sub("from now on #{word} means ", "")
+            meaning = query.sub("from now on #{word} is ", "")
             Learning.learn(word, meaning)
             return "Ok, got it, #{word} means #{meaning}"
         else
