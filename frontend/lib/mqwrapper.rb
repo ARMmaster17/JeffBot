@@ -1,7 +1,7 @@
 require_relative 'mq'
 
 module MQWrapper
-    def send(msg)
+    def MQWrapper.send(msg)
         conn = Bunny.new(ENV['RABBITMQ_BIGWIG_URL'])
         conn.start
         ch   = conn.create_channel
