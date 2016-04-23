@@ -19,7 +19,7 @@ class MQClient
 
     @reply_queue.subscribe do |delivery_info, properties, payload|
       if properties[:correlation_id] == that.call_id
-        that.response = payload.to_i
+        that.response = payload
         that.lock.synchronize{that.condition.signal}
       end
     end
