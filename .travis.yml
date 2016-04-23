@@ -22,6 +22,7 @@ install:
   - bundle install
 script:
   - ./scripts/setupdb.sh
+  - ruby ./backend/main.rb &
   - rake test --trace
 deploy:
   provider: heroku
