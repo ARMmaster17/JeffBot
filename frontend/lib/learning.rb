@@ -1,5 +1,5 @@
 require 'sinatra/activerecord'
-requier_relative '../models/entries'
+require_relative '../models/entries'
 
 module Learning
     def Learning.learn(word, meaning)
