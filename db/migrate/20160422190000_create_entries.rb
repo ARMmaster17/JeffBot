@@ -1,4 +1,4 @@
-class CreateEntries < ActiveRecord::Migration
+class CreateEntry < ActiveRecord::Migration
   def up
     create_table :entries do |t|
   	  t.string :word

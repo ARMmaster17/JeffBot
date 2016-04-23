@@ -16,7 +16,7 @@ module Learning
     def Learning.recall(word)
         begin
             data = Entries.find_by(word: word)
-            return data.definition
+            return "#{word} means #{data.definition}"
         rescue
             return "I don't know that word yet, want to teach me?"
         end
