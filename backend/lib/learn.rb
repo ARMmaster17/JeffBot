@@ -3,8 +3,10 @@ require_relative '../models/entries'
 
 module Learn
     def Learn.train_array(inputs)
-        inputs.each do |input|
-            Learn.train(input)
+        i = 0
+        while i < (inputs.length / 2)
+            Learn.train(Array.new(inputs[i], inputs[i + 1]))
+            i = i + 2
         end
     end
     def Learn.train(input)
