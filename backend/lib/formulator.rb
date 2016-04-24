@@ -11,6 +11,9 @@ module Formulator
                 previous_token = subject
             else
                 token = WordChain.next_word(previous_token)
+                if token.eql?("")
+                    break
+                end
                 previous_token = token
                 result = result + token + " "
             end
@@ -19,6 +22,6 @@ module Formulator
         return result.strip
     end
     def Formulator.create_sentence_random(subject)
-        return Formulator.create_sentence(1 + rand(10), subject)
+        return Formulator.create_sentence(3 + rand(8), subject)
     end
 end
