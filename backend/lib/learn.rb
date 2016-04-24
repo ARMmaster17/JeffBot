@@ -8,11 +8,13 @@ module Learn
         end
     end
     def train(input)
-        begin
-            learn_data = Entries.find_by(word: input[0], definition: input[1])
-            learn_data.count = learn_data.count + 1
-        rescue
+        learn_data = Entries.find_by(word: input[0], definition: input[1])
+        if learn_data.nil?
             learn_data = Entries.create(id: Entries.count, word: input[0], definition: input[1], count: 1)
+            learn_data.save
+        else
+            learn_data.count = learn_data.count + 1
+            learn_data.save
         end
     end
 end

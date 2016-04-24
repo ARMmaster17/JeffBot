@@ -10,7 +10,9 @@ module Formulator
                 result = subject + " "
                 previous_token = subject
             else
-                result = result + WordChain.next_word(previous_token) + " "
+                token = WordChain.next_word(previous_token)
+                previous_token = token
+                result = result + token + " "
             end
             iterator = iterator + 1
         end
