@@ -23,3 +23,12 @@ configure :test do
 			:encoding => 'utf8'
 	)
 end
+configure :development do
+	ActiveRecord::Base.establish_connection(
+			:adapter  => 'postgresql',
+			:host     => 'localhost',
+			:username => 'postgres',
+			:password => 'test',
+			:database => 'jb'
+	)
+end

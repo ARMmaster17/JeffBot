@@ -1,3 +1,9 @@
+development:
+  adapter: postgresql
+  database: jb
+  host: localhost
+  username: postgres
+  password: test
 test:
   adapter: postgresql
   database: travis_ci_test
