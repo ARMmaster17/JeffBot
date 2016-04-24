@@ -1,6 +1,7 @@
 require_relative 'ngram'
 require_relative 'lexicon'
 require_relative 'formulator'
+require_relative 'learn'
 
 module Markov
     def Markov.go(query)
