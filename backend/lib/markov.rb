@@ -3,7 +3,7 @@ require_relative 'lexicon'
 require_relative 'formulator'
 
 module Markov
-    def go(query)
+    def Markov.go(query)
         grams = Ngram.bigram(query)
         puts grams
         return "TESTING MODE...DO NOT RESPOND"

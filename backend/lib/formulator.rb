@@ -1,7 +1,7 @@
 require_relative 'wordchain'
 
 module Formulator
-    def create_sentence(length, subject)
+    def Formulator.create_sentence(length, subject)
         result = ""
         previous_token = ""
         iterator = 0
@@ -18,7 +18,7 @@ module Formulator
         end
         return result.strip
     end
-    def create_sentence_random(subject)
+    def Formulator.create_sentence_random(subject)
         return Formulator.create_sentence(1 + rand(10), subject)
     end
 end
