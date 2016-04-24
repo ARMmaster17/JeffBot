@@ -1,4 +1,5 @@
-require_relative 'markov'
+require_relative 'lib/markov'
+require_relative 'lib/lexicon'
 
 module Botsolver
     def Botsolver.go(arg)
