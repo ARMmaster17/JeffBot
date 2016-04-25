@@ -25,5 +25,8 @@ Sure! Just be sure to document your code and your PRs. Remember to submit your P
 ## What if I can't program?
 ~~We accept Gratipay donations~~. We also benefit from sharing the site with your friends. The more people that talk to JeffBot, the faster it learns!
 
+## Why does JeffBot keep saying nonsense?
+Every once in a while, we will purge the database (our current plan with Heroku is limited at 10,000 rows). This will require JeffBot to re-learn new connections. To prevent this, just talk to JeffBot! It will learn by analyzing your sentences, then it will go on to form its own.
+
 ## I keep getting **Application Error**
-Right now, we are hosted on the free tier of Heroku, which mandates that apps can only run for 18 hours per day. Just wait a few hours and try again. ~~If you would like to donate so we can use a bigger server, use the Gratipay icon above (team currently pending approval)~~.
+Right now, we are hosted on the free tier of Heroku, which mandates that apps can only run for 18 hours per day. Just wait a few hours and try again. ~~If you would like to donate so we can use a bigger server, use the Gratipay icon above~~ (currently pending approval).
