@@ -19,6 +19,9 @@ You will need a copy of PostgreSQL, RabbitMQ, and two terminals. Simply edit the
 ## What if I'm too lazy to run it locally?
 We have an installation running on heroku. You can visit it by going to [https://jeffchatbot.herokuapp.com](https://jeffchatbot.herokuapp.com). There is also a [GroupMe group](https://groupme.com/join_group/21478794/zYbvId), and an upcoming Kik version coming soon.
 
+## Is JeffBot safe for work (SFW)?
+Nope. We were dumb enough to let the internet train JeffBot. On top of that, it would take to long to add a 'filter' for a SFW mode. In short, JeffBot is NSFW. Don't expect anything else.
+
 ## Can I help?
 Sure! Just be sure to document your code and your PRs. You are responsible for testing your code before submitting. Other than that, remember to keep it simple!
 
