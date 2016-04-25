@@ -17,7 +17,7 @@ You will need a copy of PostgreSQL, RabbitMQ, and two terminals. Simply edit the
 We have an installation running on heroku. You can visit it by going to [https:\\jeffchatbot.herokuapp.com](https:\\jeffchatbot.herokuapp.com). There is also a [GroupMe group](https://groupme.com/join_group/21478794/zYbvId), and an upcoming Kik version coming soon.
 
 ## Can I help?
-Sure! Just be sure to document your code and your PRs. Other than that, remember to keep it simple!
+Sure! Just be sure to document your code and your PRs. Remember to submit your PR against the `dev` branch, otherwise your request will be denied. You are responsible for testing your code before submitting. Other than that, remember to keep it simple!
 
 ## What if I can't program?
 ~~We accept Gratipay donations~~. We also benefit from sharing the site with your friends. The more people that talk to JeffBot, the faster it learns!
