@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/ARMmaster17/JeffBot.svg?branch=master)](https://travis-ci.org/ARMmaster17/JeffBot)
+[![Gratipay Team](https://img.shields.io/gratipay/team/JeffBot-AI.svg?maxAge=2592000?style=flat-square)](https://gratipay.com/JeffBot-AI/)
 
 # JeffBot
 (Yet another) comical and extensible chat bot.
