@@ -9,7 +9,7 @@ $('#msgTrigger').on('click', function (e) {
         type: "POST",
         url: "api/v1/post",
         data: {arg: msg},
-        timeout: 20000
+        timeout: 20000,
         success: function(result, status, xhr){
             $("#messageQueue").prepend("<div class=\"message_container\"><div class=\"message_jeff\">" + result + "</div></div>");
         }
