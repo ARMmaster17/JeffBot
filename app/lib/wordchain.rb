@@ -1,4 +1,4 @@
-require 'sinatra/activerecord'
+require 'active_record'
 require_relative '../models/entries'
 
 module WordChain
@@ -16,6 +16,7 @@ module WordChain
             return tokens[rand(tokens.length)]
         end
     end
+
     def WordChain.bigram_word(previous_token)
         groups = Entries.where(word: previous_token).order(count: :desc)
         if(groups.length == 0)

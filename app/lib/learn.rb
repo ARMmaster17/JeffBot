@@ -1,4 +1,4 @@
-require 'sinatra/activerecord'
+require 'active_record'
 require_relative '../models/entries'
 
 module Learn
