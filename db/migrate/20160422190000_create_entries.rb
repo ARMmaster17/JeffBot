@@ -2,6 +2,7 @@ class CreateEntry < ActiveRecord::Migration
   def up
     create_table :entries do |t|
   	  t.string :word
+  	  t.string :nword
   	  t.string :definition
   	  t.integer :count
   	end
