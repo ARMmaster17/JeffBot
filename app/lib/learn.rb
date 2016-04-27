@@ -8,10 +8,10 @@ module Learn
         end
     end
     def Learn.train(input)
-        learn_data = Entries.find_by(word: input[0], definition: input[1])
+        learn_data = Entries.find_by(word: input[0], nword: input[1], definition: input[2])
         if learn_data.nil?
             if Entries.count < 9900
-                learn_data = Entries.create(id: Entries.count, word: input[0], definition: input[1], count: 1)
+                learn_data = Entries.create(id: Entries.count, word: input[0], nword: input[1], definition: input[2], count: 1)
                 learn_data.save
             end
         else

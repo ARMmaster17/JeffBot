@@ -14,7 +14,7 @@ JeffBot is a markov/neural-network based machine learning experiment in the form
 We are still in the early stages of development. JeffBot was originally supposed to be a fun weekend project, but due to the request of multiple developers, it has been published here on GitHub for all to see.
 
 ## Can I help?
-Sure! Just be sure to document your code and your PRs. You are responsible for testing your code before submitting. Other than that, remember to keep it simple!
+Sure! Just be sure to document your code and your PRs. You are responsible for testing your code before submitting. Also, make sure that when you submit a PR that you do it against the `dev` branch. Other than that, remember to keep it simple! For more details, take a look at our [CONTRIBUTING](https://github.com/ARMmaster17/JeffBot/blob/master/CONTRIBUTING.md) file.
 
 ### Migrations
 We use the [standalone-migrations](https://github.com/thuss/standalone-migrations) gem. You can add migrations by running:

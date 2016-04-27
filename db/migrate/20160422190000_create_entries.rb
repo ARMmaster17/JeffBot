@@ -4,8 +4,9 @@ class CreateEntries < ActiveRecord::Migration
       t.string :word
       t.string :definition
       t.integer :count
-    end
+  	end
   end
+
   def down
     drop_table :entries
   end

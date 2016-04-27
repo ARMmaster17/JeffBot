@@ -5,4 +5,7 @@ module Ngram
     def Ngram.bigram(string)
         return ngrams(2, string)
     end
+    def Ngram.trigram(string)
+        return ngrams(3, string)
+    end
 end
