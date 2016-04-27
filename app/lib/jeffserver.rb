@@ -24,9 +24,19 @@ class JeffServer
     exchange = @ch.default_exchange
 
     queue.subscribe(:block => blocking) do |delivery_info, properties, payload|
-      r = message_parser.go(payload)
-      if respond
-        exchange.publish(r, :routing_key => properties.reply_to, :correlation_id => properties.correlation_id)
+      begin
+        r = ""
+        begin
+          r = message_parser.go(payload)
+        rescue StandardError => ex
+          r = "ERROR: #{ex}"
+        end
+
+        if respond
+          exchange.publish(r, :routing_key => properties.reply_to, :correlation_id => properties.correlation_id)
+        end
+      rescue StandardError => ex
+        ap ex
       end
     end
   end
