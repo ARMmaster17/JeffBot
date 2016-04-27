@@ -19,5 +19,13 @@ Sure! Just be sure to document your code and your PRs. You are responsible for t
 ## What if I can't program?
 ~~We accept Gratipay donations~~. We also benefit from sharing the site with your friends. The more people that talk to JeffBot, the faster it learns!
 
+## How does it work?
+This is the backend process. This is meerly a RabbitMQ subscriber & it will call the correct method based on the queue the message was received on.
+
+## How can I talk to it?
+You can use any one of the fron end applications!
+
+[JeffBot Slack](https://github.com/FreekingDean/JeffBot-Slack)
+
 ## Got more questions?
 Checkout our [FAQ page](https://github.com/ARMmaster17/JeffBot/wiki/FAQ) for answers!
