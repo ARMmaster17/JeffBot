@@ -39,7 +39,8 @@ This is the backend process. This is meerly a RabbitMQ subscriber & it will call
 ## How can I talk to it?
 You can use any one of the fron end applications!
 
-[JeffBot Slack](https://github.com/FreekingDean/JeffBot-Slack)
+- [JeffBot Slack](https://github.com/FreekingDean/JeffBot-Slack)
+- [JeffBot Web](https://github.com/FreekingDean/JeffBot-Web)
 
 ## Got more questions?
 Checkout our [FAQ page](https://github.com/ARMmaster17/JeffBot/wiki/FAQ) for answers!
