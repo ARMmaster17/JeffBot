@@ -35,3 +35,6 @@ build/
 # NewRelic stuff
 logfile
 log/newrelic_agent.log
+
+*.swp
+*.swo
