@@ -1,2 +1,1 @@
-web: ruby ./frontend/main.rb
-worker: ruby ./backend/main.rb
+worker: bundle exec ruby ./app/main.rb

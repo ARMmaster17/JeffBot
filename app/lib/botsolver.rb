@@ -1,8 +1,8 @@
 require_relative 'markov'
 require_relative 'lexicon'
 
-module Botsolver
-    def Botsolver.go(arg)
+class Botsolver
+    def self.go(arg)
         query = Lexicon.clean(arg)
         return Markov.go(query)
     end
