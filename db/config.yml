@@ -1,0 +1,16 @@
+common: &common
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *common
+  username: jeff_bot
+  password: jeff_bot
+  database: jeff_bot_dev
+
+test:
+  <<: *common
+  username: jeff_bot
+  database: jeff_bot_test
