@@ -27,5 +27,5 @@ script:
 deploy:
   provider: heroku
   api_key: "9951e24c-b489-48fe-8a60-b325e8d850dd"
-  app: jeffchatbot
+  app: jeffchatbot-backend
   run: "rake db:migrate --trace"
