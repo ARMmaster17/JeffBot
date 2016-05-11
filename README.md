@@ -1,6 +1,8 @@
 [![Build Status](https://travis-ci.org/ARMmaster17/JeffBot.svg?branch=master)](https://travis-ci.org/ARMmaster17/JeffBot)
 [![Gratipay Team](https://img.shields.io/gratipay/team/JeffBot-AI.svg?maxAge=2592000?style=flat-square)](https://gratipay.com/JeffBot-AI/)
 
+# JeffBot2 is out! Check it out at [here](https://github.com/ARMmaster17/jeffbot2)
+
 # JeffBot
 (Yet another) comical and extensible chat bot.
 
